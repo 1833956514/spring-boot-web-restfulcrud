@@ -1,8 +1,7 @@
 package com.emp.springboot.config;
 
+import com.emp.springboot.component.LoginHandlerInterceptor;
 import com.emp.springboot.component.MyLocaleResolver;
-import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;
-import org.springframework.boot.context.embedded.EmbeddedServletContainerCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.LocaleResolver;
@@ -37,7 +36,7 @@ public class MyMvcConfig extends WebMvcConfigurerAdapter {
             @Override
             public void addInterceptors(InterceptorRegistry registry) {
                 //super.addInterceptors(registry);
-//                registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").excludePathPatterns("/index.html","/","/user/login");
+               registry.addInterceptor(new LoginHandlerInterceptor()).addPathPatterns("/**").excludePathPatterns("/index.html","/","/user/login","/**/*.css","/**/*.js","/**/*.ico","/**/*.svg");
             }
         };
         return adapter;

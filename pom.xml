@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.10.RELEASE</version>
+        <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.emp</groupId>
@@ -18,10 +18,10 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <thymeleaf.version>3.0.9.RELEASE</thymeleaf.version>
+        <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
         <!-- 布局功能的支持程序  thymeleaf3主程序  layout2以上版本 -->
         <!-- thymeleaf2   layout1-->
-        <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
+        <thymeleaf-layout-dialect.version>2.4.1</thymeleaf-layout-dialect.version>
     </properties>
 
     <dependencies>
@@ -43,6 +43,34 @@
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--        </dependency>-->
 
+        <!--引入tomcat starter模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>2.1.5.RELEASE</version>
+        </dependency>
+
+
+        <!--引入jdbc-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+
+        <!--引入mybatis-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.0.1</version>
+        </dependency>
+
+        <!--引入mysql-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- 引入jQuery-webjar -->
         <dependency>
             <groupId>org.webjars</groupId>
@@ -52,15 +80,37 @@
 
         <!-- 引入bootstrap -->
         <dependency>
-            <groupId>org.webjars.bower</groupId>
+            <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
-            <version>4.0.0</version>
+            <version>4.3.1</version>
         </dependency>
 
         <!-- 引入thymeleaf -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+
+        <!--java模板引擎-->
+<!--        <dependency>-->
+<!--            <groupId>org.thymeleaf</groupId>-->
+<!--            <artifactId>thymeleaf-spring5</artifactId>-->
+<!--            <version>3.0.11.RELEASE</version>-->
+<!--        </dependency>-->
+
+
+        <!--引入druid-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.1.17</version>
+        </dependency>
+
+        <!--引入log4j-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
         </dependency>
 
         <dependency>
